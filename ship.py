@@ -4,7 +4,7 @@ class Ship():
         self.screen = screen
 
         """get_rect()方法可以获取屏幕和元素的矩阵信息"""
-        self.image = pygame.image.load('ship.bmp')
+        self.image = pygame.image.load('image/ship.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 
