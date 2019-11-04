@@ -26,6 +26,9 @@ def run_game():
         """监控事件和键盘"""
         gf.check_event(ship)
 
+        """"""
+        ship.update()
+
         """更新屏幕上的图像"""
         gf.update_screen(ui_setting,screend,ship)
 

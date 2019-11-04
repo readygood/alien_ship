@@ -15,5 +15,17 @@ class Ship():
         self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
 
+        """移动标志(flag)"""
+        self.keepmoving_right = False
+        self.keepmoving_left = False
+        self.keepmoving_up = False
+        self.keepmoving_down = False
+
     def blitme(self):
         self.screen.blit(self.image,self.rect)
+
+    def update(self):
+        if self.keepmoving_right:
+            self.rect.centerx += 1
+        elif self.keepmoving_left:
+            self.rect.centerx -= 1
