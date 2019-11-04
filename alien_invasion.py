@@ -1,7 +1,7 @@
 import pygame
 from ship import Ship
 from setting import Settings
-import function
+import function as gf
 
 def run_game():
 
@@ -24,9 +24,9 @@ def run_game():
     while True:
 
         """监控事件和键盘"""
-        function.check_event()
+        gf.check_event(ship)
 
         """更新屏幕上的图像"""
-        function.update_screen(ui_setting,screend,ship)
+        gf.update_screen(ui_setting,screend,ship)
 
 run_game()

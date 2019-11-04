@@ -1,10 +1,17 @@
 import pygame
 import sys
+import ship
 
-def check_event():
+def check_event(ship_main):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
+
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RIGHT:
+                ship_main.rect.centerx += 1
+            elif event.key == pygame.K_LEFT:
+                ship_main.rect.centerx -= 1
 
 
 def update_screen(setting,screen_display,ship_main):
