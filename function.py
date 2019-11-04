@@ -15,5 +15,6 @@ def update_screen(setting,screen_display,ship_main):
     """使用ship的blitme方法获取image(这里是飞船)的位置信息"""
     ship_main.blitme()
 
+
     """最近绘制的屏幕可见"""
     pygame.display.flip()
