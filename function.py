@@ -16,10 +16,19 @@ def check_event(ship_main):
             elif event.key == pygame.K_LEFT:
                 ship_main.keepmoving_left = True
 
+            elif event.key == pygame.K_UP:
+                ship_main.keepmoving_up = True
+
+            elif event.key == pygame.K_DOWN:
+                ship_main.keepmoving_down = True
+
         elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT:
+            if event.key == pygame.K_RIGHT or event.key == pygame.K_LEFT or event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                 ship_main.keepmoving_right = False
                 ship_main.keepmoving_left = False
+                ship_main.keepmoving_up = False
+                ship_main.keepmoving_down = False
+
 
 def update_screen(setting,screen_display,ship_main):
 

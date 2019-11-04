@@ -13,6 +13,7 @@ class Ship():
         """再将屏幕的底部坐标赋值给元素底部"""
         """这样ship元素就在屏幕底部中心了"""
         self.rect.centerx = self.screen_rect.centerx
+        #self.rect.centery = self.screen_rect.centery
         self.rect.bottom = self.screen_rect.bottom
 
         """移动标志(flag)"""
@@ -29,3 +30,7 @@ class Ship():
             self.rect.centerx += 1
         elif self.keepmoving_left:
             self.rect.centerx -= 1
+        elif self.keepmoving_up:
+            self.rect.centery -= 1
+        elif self.keepmoving_down:
+            self.rect.centery += 1
