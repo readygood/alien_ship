@@ -13,7 +13,6 @@ def check_event(ship_main):
             elif event.key == pygame.K_LEFT:
                 ship_main.rect.centerx -= 1
 
-
 def update_screen(setting,screen_display,ship_main):
 
     """更新屏幕上的图像，并且换到新屏幕"""
