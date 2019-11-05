@@ -1,6 +1,5 @@
 import pygame
 import sys
-import ship
 
 def check_event(ship_main):
     for event in pygame.event.get():
