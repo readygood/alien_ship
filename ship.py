@@ -22,15 +22,21 @@ class Ship():
         self.keepmoving_up = False
         self.keepmoving_down = False
 
+        """定义飞船移动像素的属性"""
+        self.move_px = float(self.rect.centerx)
+        self.move_py = float(self.rect.centery)
+
+
     def blitme(self):
         self.screen.blit(self.image,self.rect)
 
+    """为Ship类定义一个方法,可以使飞船上下左右移动"""
     def update(self):
         if self.keepmoving_right:
-            self.rect.centerx += 1
+            self.rect.centerx += 2
         elif self.keepmoving_left:
-            self.rect.centerx -= 1
+            self.rect.centerx -= 2
         elif self.keepmoving_up:
-            self.rect.centery -= 1
+            self.rect.centery -= 2
         elif self.keepmoving_down:
-            self.rect.centery += 1
+            self.rect.centery += 2
