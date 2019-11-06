@@ -18,7 +18,7 @@ def run_game():
     """通过Ship类创建一个ship实例"""
     """以初始化的屏幕作为参数"""
     """让ship元素根据屏幕进行对齐"""
-    ship = Ship(screend)
+    ship = Ship(ui_setting,screend)
 
     """开始主循环"""
     while True:
