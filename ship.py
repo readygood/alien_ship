@@ -48,17 +48,28 @@ class Ship():
         # if self.keepmoving_right and self.rect.right < self.screen_rect.right:
         #     self.rect.centerx += 2
 
-        if self.keepmoving_right:
+        if self.keepmoving_right and self.rect.right < self.screen_rect.right:
             self.move_px += self.setting.ship_speed_factor
 
-        if self.keepmoving_left:
+        if self.keepmoving_left and self.rect.left > self.screen_rect.left:
             self.move_px -= self.setting.ship_speed_factor
 
-        if self.keepmoving_up:
+        if self.keepmoving_up and self.rect.top > self.screen_rect.top:
             self.move_py -= self.setting.ship_speed_factor
 
-        if self.keepmoving_down:
+        if self.keepmoving_down and self.rect.bottom < self.screen_rect.bottom:
             self.move_py += self.setting.ship_speed_factor
+        # if self.keepmoving_right:
+        #     self.move_px += self.setting.ship_speed_factor
+
+        # if self.keepmoving_left:
+        #     self.move_px -= self.setting.ship_speed_factor
+
+        # if self.keepmoving_up:
+        #     self.move_py -= self.setting.ship_speed_factor
+
+        # if self.keepmoving_down:
+        #     self.move_py += self.setting.ship_speed_factor
 
         self.rect.centerx = self.move_px
         self.rect.centery = self.move_py
