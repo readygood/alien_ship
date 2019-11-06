@@ -18,6 +18,7 @@ def run_game():
     """通过Ship类创建一个ship实例"""
     """以初始化的屏幕作为参数"""
     """让ship元素根据屏幕进行对齐"""
+
     ship = Ship(ui_setting,screend)
 
     """开始主循环"""
@@ -26,7 +27,7 @@ def run_game():
         """监控事件和键盘"""
         gf.check_event(ship)
 
-        """"""
+        """使用ship中的update方法"""
         ship.update()
 
         """更新屏幕上的图像"""
