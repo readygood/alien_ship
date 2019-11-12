@@ -24,6 +24,7 @@ def run_game():
 
     bullets = Group()
 
+
     """开始主循环"""
     while True:
 
