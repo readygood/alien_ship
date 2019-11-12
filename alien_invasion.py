@@ -9,7 +9,7 @@ def run_game():
     pygame.init()
 
     """根据Setting类创建一个实例"""
-    ui_setting = Settings(bg_color=(65,105,225))
+    ui_setting = Settings(bg_color=(225,225,225))
 
     """定义屏幕"""
     screend = pygame.display.set_mode((ui_setting.screen_width,ui_setting.screen_height))
