@@ -2,6 +2,7 @@ import pygame
 from ship import Ship
 from setting import Settings
 import function as gf
+from pygame.sprite import Group
 
 def run_game():
 
@@ -21,16 +22,23 @@ def run_game():
 
     ship = Ship(ui_setting,screend)
 
+    bullets = Group()
+
     """开始主循环"""
     while True:
 
         """监控事件和键盘"""
-        gf.check_event(ship)
+        gf.check_event(ui_setting,screend,ship,bullets)
 
         """使用ship中的update方法"""
         ship.update()
 
+        bullets.update()
+
         """更新屏幕上的图像"""
-        gf.update_screen(ui_setting,screend,ship)
+        gf.update_screen(ui_setting,screend,ship,bullets)
+
+
+        #gf.update_screen(ui_setting,screend)
 
 run_game()
